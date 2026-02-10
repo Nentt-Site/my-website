@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chaos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jewelry.css">
+</head>
+
+<body>
+
+<div class="nav">
+    <img src="Black  White Simple Minimal Classic Circular Typographic Fashion Brand Chaos Logo.png" width="170" height="120">
+    <ul>
+        <li><a href="#head">RECEPTION</a></li>
+        <li><a href="#reception">BY THE WAY</a></li>
+        <li><a href="#shop">SHOP</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+    </ul>
+</div>
+
+<section id="head">
+    <h3 class="heading">Core Flow</h3>
+</section>
+
+<section id="reception">
+    <div class="content">
+        <h2>By the way</h2>
+        <p style="font-size:20px;">
+            CHAOS was born from a dream to revive the ancestral know-how of silver craftsmen, which has been known for centuries and
+            stems from a long tradition, but unfortunately is being lost
+            with the mechanization of jewelry making.
+            <br><br>
+            Entirely handmade, our jewelry is made to last over time and
+            allow you to wear a rare, unique and precious object.
+        </p>
+    </div>
+    <div class="image-box">
+        <img src="pexels-ante-emmanuel-3691197-28119481.jpg" width="550" height="500">
+    </div>
+</section>
+
+<section id="shop">
+    <div class="collection">
+        <h3 style="text-align:center; padding:60px;">New Collection</h3>
+        <div class="image-slideshow">
+            <img src="pexels-fero-34520061.jpg">
+            <img src="pexels-arif-16438686.jpg">
+            <img src="pexels-nguy-n-b-o-trung-1751109-20243530.jpg">
+            <img src="pexels-the-glorious-studio-3584518-10361482.jpg">
+            <img src="pexels-marius-pavel-2538029-4138795.jpg">
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2 style="text-align:center; font-size:30px;">Coups de Coeur</h2>
+    <div class="gallery-box">
+        <img src="pexels-alexandra-maria-58259-336372.jpg">
+        <img src="pexels-athena-2043590.jpg">
+        <img src="pexels-aksioart-1926769.jpg">
+        <img src="pexels-eliasdecarvalho-1144834.jpg">
+        <img src="pexels-godisable-jacob-226636-932401.jpg">
+        <img src="pexels-godisable-jacob-226636-965324.jpg">
+        <img src="pexels-gokiberk-32649635.jpg">
+        <img src="pexels-kowalievska-1126993.jpg">
+        <img src="pexels-kunal-lakhotia-781256899-32988665.jpg">
+        <img src="pexels-nguy-n-b-o-trung-1751109-20243530.jpg">
+        <img src="pexels-olly-994234.jpg">
+        <img src="pexels-rfera-432059.jpg">
+    </div>
+</section>
+
+<section id="contact">
+<footer class="footer">
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="#head">RECEPTION</a></li>
+            <li><a href="#reception">BY THE WAY</a></li>
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <form id="mail">
+        <p>EMAIL:
+            <input type="email" id="form-box" class="mail-box" required>
+        </p>
+        <input type="submit" class="submit-btn">
+    </form>
+
+    <div class="btn-container">
+        <button><a href="#shop">SHOP NOW</a></button>
+    </div>
+</footer>
+</section>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+    // Navbar scroll effect
+    const nav = document.querySelector(".nav");
+    window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Nav links click + highlight
+    const navLinks = document.querySelectorAll(".nav a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            console.log("Navigation link clicked:", link.textContent);
+            navLinks.forEach(l => {
+                l.style.color = "white";
+                l.style.borderBottom = "none";
+            });
+            link.style.color = "brown";
+            link.style.borderBottom = "2px solid brown";
+        });
+    });
+
+    // Email validation
+    const form = document.getElementById("mail");
+    const emailInput = document.getElementById("form-box");
+    form.addEventListener("submit", function(e) {
+        if (!emailInput.value.includes("@")) {
+            alert("Please enter a valid email address.");
+            e.preventDefault();
+        }
+    });
+
+    // Shop button click alert
+    const shopBtn = document.querySelector(".btn-container button");
+    shopBtn.addEventListener("click", () => {
+        alert("Welcome to the CHAOS collection ✨");
+    });
+</script>
+
+</body>
+</html>
